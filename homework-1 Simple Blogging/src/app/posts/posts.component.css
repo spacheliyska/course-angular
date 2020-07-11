@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css?family=Averia+Serif+Libre|Bubblegum+Sans|Caveat+Brush|Chewy|Lobster+Two');
+
+input[type=text], select {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+div {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+label,input{
+  font-family: 'Lobster Two', cursive;
+  font-size: 16px;
+}
+
+.container{
+  width: 500px;
+  height: 650px;
+  margin-top: 90px;
+}
+
+.posts{
+  background-color: white;
+  font-family: 'Lobster Two', cursive, serif;
+  font-size: 24px;
+  font-weight: normal;
+  margin: 0;
+}
+
+h2 { color: #7c795d;   
+  font-family: 'Lobster Two', cursive, serif; 
+  font-size: 45px; 
+  font-weight: normal;
+   line-height: 48px;
+    margin: 0;
+  margin-top: 90px; 
+}
+html,body{
+  height:100%;
+}
+#container{
+  height:100%;
+  width:100%;
+  font-size:0;
+  margin:0 auto;
+}
+.item1{
+  display:inline-block;
+  vertical-align:top;
+  background:white;
+  height:115%;
+  width:68%;
+}
+.item{
+  display:inline-block;
+  vertical-align:top;
+  background:white;
+  height:115%;
+  width:32%;
+}
+
+.item1:nth-child(2){
+  background:#F4CAAE;
+}
+  .form{
+      width: 380px;
+      margin-top: 45px;
+  }
+  

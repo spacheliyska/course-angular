@@ -1,0 +1,80 @@
+<div id='container'>
+  <div class='item1'>
+    <h2>Posts:</h2>
+
+    <div class="posts" *ngIf="posts && posts.length > 0">
+      <ul>
+        <li *ngFor="let post of posts; let idx = index">
+          {{post.title}}
+          {{post.author}}
+          {{post.description}}
+          {{post.publicationDate}}
+          {{post.tags}}
+          {{post.imageURL}}
+          {{post.status}}
+          <span>
+            <button (click)="update(post)">Update</button>
+          </span>
+          <span>
+            <button (click)="deleteElemWithIndex(post)"> Delete </button>
+          </span>
+          <br>
+
+          <div *ngIf="post.toUpdate">
+            <form [formGroup]="updatePostForm" (ngSubmit)="onUpdateFormSubmit(post)">
+
+              <label>Title:</label>
+              <input type="text" formControlName="title" placeholder="Enter title">
+
+              <label>Author:</label>
+              <input type="text" formControlName="author" placeholder="Enter author">
+      
+              <label>Description:</label>
+              <input type="text" formControlName="description" placeholder="Enter description">
+      
+              <label>Tags:</label>
+              <input type="text" formControlName="tags" placeholder="Enter tags">
+      
+              <label>Image URL:</label>
+              <input type="text" formControlName="imageURL" placeholder="Enter image URL">
+      
+              <label>Status:</label><br>
+              <input type="radio" value="ACTIVE" checked> Active<br>
+              <input type="radio" value="INACTIVE"> Inactive<br><br>
+      
+              <input type="submit" value="Submit">
+            
+            </form>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </div>
+
+  <div class='item'>
+    <div class="form" style="float: right;">
+      <form [formGroup]="postForm" (ngSubmit)="onFormSubmit()">
+        <label>Title:</label>
+        <input type="text" formControlName="title" placeholder="Enter title">
+
+        <label>Author:</label>
+        <input type="text" formControlName="author" placeholder="Enter author">
+
+        <label>Description:</label>
+        <input type="text" formControlName="description" placeholder="Enter description">
+
+        <label>Tags:</label>
+        <input type="text" formControlName="tags" placeholder="Enter tags">
+
+        <label>Image URL:</label>
+        <input type="text" formControlName="imageURL" placeholder="Enter image URL">
+
+        <label>Status:</label><br>
+        <input type="radio" value="ACTIVE" checked> Active<br>
+        <input type="radio" value="INACTIVE"> Inactive<br><br>
+
+        <input type="submit" value="Submit">
+      </form>
+    </div>
+  </div>
+</div>
